@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>elle!</title>
+    <link href='styles.css' rel='stylesheet'/>
+  </head>
+  <body>
+
+    <div class='header'>
+      <div class='logo'><img src='images/awesome-logo.svg'/></div>
+      <ul class='menu'>
+        <li class='dropdown'><span>projects &#9662;</span>
+          <ul class='features-menu'>           <!-- Start of submenu -->
+            <li><a href='creepy.html'>creepy</a></li>
+            <li><a href='BART/risk.html'>risk</a></li>
+            <li><a href='evil-women.html'>evil women</a></li>
+            <li><a href='forensic-psychology.html'>forensic psychology</a></li>
+          </ul>                                <!-- End of submenu -->
+        </li>
+        <li><a href='about-me.html'>about me</a></li>   
+        <li><a href='contact-me.html'>contact me</a></li>
+        <li><a href='index.html'>home</a></li>
+      </ul>
+    </div>  
+
+    <div class="welcome">
+    <h1>creating deepfakes</h1>
+    <p>
+        Devising a method to examine the role of behaviour in perceiving creepiness was a harder task than I thought. I soon realized how difficult it would be to <em>ethically</em> create a dataset which containted both static facial images
+        and videos of "creepy" people. My supervisor published a study which, in the pilot, established a database of "creepy" static facial images. But it's not like we could contact these individuals; some of them were listed as America's Most Wanted, and
+         some of them were robots (and we all know how flippant robots can be). 
+        <br> <br>
+        One day, I stumbled upon a silly video of a dog, which someone had edited to sing a song, and I realized it might be possible to apply the same principles used
+        in that video to static facial images. If they could make the dog sing, I thought to myself, perhaps I could add subtle movement to images. <br> <br> <strong>For scientific reasons only,</strong> here's that video:
+    </p>
+    <figure>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rFklkcgpFMc?start=20" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>
+    
+    <p>Anyways, I had absolutely no idea where to start in creating something like this. Fortunately, there was a <a href="https://github.com/AliaksandrSiarohin/first-order-model">public repository</a> available for people to create these things, called deepfakes. Countless video tutorials later, I was able to
+        take the motion patterns from a driving video of myself (see below) and synthesize them on to a static image. 
+        <br> <br> Here is one of the very first that I made:  
+    </p>
+    <figure> 
+        <img src="images/demo_dynamic.gif" alt="creepiness poster" width="560">
+        <figcaption>  </figcaption>
+    </figure>
+    <p>
+        From there, I was able to make a dynamic facial image for every static one. I used three different motion patterns and randomly assigned a motion pattern to each facial image.
+    </p>
+    <figure> 
+        <img src="images/Presentation1.gif" alt="deepfake" width="700px">
+    </figure>
+   <div class="welcome">
+    <p>
+        <em>To be honest, I was surprised I managed to do this.</em><br><br>
+        All in all, it was quite a rewarding experience when I <em>finally</em> figured out how it could be done, and I hope
+        that my future research endeavours will offer me opportunities to explore coding further.
+    </p>
+  </div>
+  </br>
+    <h1>the canadian psychological association's annual national convention </h1>
+   
+    <div class="photo-grid-container">
+      <div class="photo-grid">
+          <div class="photo-grid-item">
+            <img src="images/cpa1.jpg" alt="photo of elle levesque at cpa conference.">
+         </div>
+        <div class="photo-grid-item">
+          <img src="images/cpa2.jpg" alt="photo of elle levesque at cpa conference.">
+    </div>
+      
+    <div class="photo-grid">
+      <img src="images/poster.jpg" width="1000px">
+    </div>
+  </br></br>
+    <div class="welcome">
+    </br> </br> <h1>publicly available data </h1>
+    <p>I am a firm believer in open science and data. As such, I intent to make the data publicly available for my thesis after it has been submitted for publication. 
+        In the meantime, please email me with any questions.
+    </p>
+  </div>
+  </div>
+  </div>
+    
+  <div class='footer'>
+    <div class='footer-item footer-one'></div>
+    <div class='footer-item footer-two'></div>
+    <div class='footer-item footer-three'></div>
+  </div>
+
+  <script>
+    var left = 0;
+  
+    function frame() {
+      var element = document.querySelector('.logo');
+      left += .3;
+      element.style.left = left + 'px';
+      if (left >= 120) {
+        clearInterval(id)
+      }
+    }
+  
+    var id = setInterval(frame, 10)
+  
+    
+  </script>
+
+  
+    </body>
+    </html>

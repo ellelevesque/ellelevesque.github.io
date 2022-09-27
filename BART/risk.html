@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>elle!</title>
+    <link href='../styles.css' rel='stylesheet'/>
+  </head>
+  <body>
+
+    <div class='header'>
+      <div class='logo'><img src='images/awesome-logo.svg'/></div>
+      <ul class='menu'>
+        <li class='dropdown'><span>projects &#9662;</span>
+          <ul class='features-menu'>           <!-- Start of submenu -->
+            <li><a href='../creepy.html'>thesis</a></li>
+            <li><a href='BART/risk.html'>risk</a></li>
+            <li><a href='../evil-women.html'>evil women</a></li>
+            <li><a href='../forensic-psychology.html'>forensic psychology</a></li>
+          </ul>                                <!-- End of submenu -->
+        </li>
+        <li><a href='../about-me.html'>about me</a></li>   
+        <li><a href='../contact-me.html'>contact me</a></li>
+        <li><a href='../home.html'>home</a></li>
+      </ul>
+    </div>  
+
+    <div class="welcome">
+    <h1>summer 2022 research<br>the balloon analogue risk task (BART)</h1>  
+    <div id="bart"s style="width: 300px; margin: 0px auto; text-align: center;"></div>
+          <br>
+    <p>
+      My summer research project involved examining the role played by anxiety sensitivity (i.e., the <em>fear of fear</em>, <a href="https://www.scirp.org/(S(i43dyn45teexjx455qlt3d2q))/reference/referencespapers.aspx?referenceid=255510">
+      see Reiss and McNally, 1985)</a> across different constructs related to risk: risk perception, risk attitude, and risk-taking. The BART was used as an objective measure of risk-taking. <br> <br>This was my first foray into 
+      implementing code of any kind into a survey software. The survey software I used is called Unipark.de. It is a great tool, but there was a bit of a learning curve for me
+      because it is in German, and I cannot stress to you enough that I do not speak German. Fortunately, most parts will translate if you use the right internet engine.
+       If you are interested in using Unipark.de, there are some online tutorials <a href="https://www.youtube.com/watch?v=YzT8U07NL1s"><b>here</b></a>, or you can always email me. 
+    </p> 
+    <p>
+      Even though many risky behaviours generate the somatic arousal feared by individuals with high AS, to my knowledge, only two studies (<a href="https://pubmed.ncbi.nlm.nih.gov/11196285/"><b>here</b> 
+      </a> and <a href="https://psycnet.apa.org/record/2014-37459-003"><b>here</b>)</a> have examined the role of AS in relation to risk-taking. The first found high (vs. low) AS 
+      scores to be associated with a greater reported incidence of high-risk sexual practices, and less frequent substance abuse. This study, however, relied only on self-report, which raises 
+      questions about whether responses were distorted due to factors such as self-serving biases, inattention, or strategic motives. 
+      The second study found that when placed under conditions of risk in a gambling task, individuals with high AS engaged in significantly less risk-taking than their low AS counterparts. 
+      While this study did use a behavioural measure, the measure has not been found to model real-world risk taking, limiting result generalizability. 
+      <br><br>
+      This research is expected to contribute to the literature on conceptualizations of risk perception, attitude, and taking, and provide insight into how risk perception and risk attitude may 
+      differentially inform risk-taking based on levels of AS. Better understanding risk offers benefits for applied research (e.g., improving risk communication programs), for methodological 
+      research and for humans, all of whom engage in risks every day. 
+    </p>
+      <p>You can get more information about the BART and the developer <a href="http://timo.gnambs.at/"><b>here</b></a>.
+    </p>
+  </div>
+
+    
+  <div class='footer'>
+    <div class='footer-item footer-one'></div>
+    <div class='footer-item footer-two'></div>
+    <div class='footer-item footer-three'></div>
+  </div>
+
+
+    <!-- these files are required for the BART    -->
+	<script type="text/javascript" src="src/jquery-3.0.0.min.js"></script>	<!-- basic javascript library for dom manipulation -->
+	<script type="text/javascript" src="src/jcanvas.min.js"></script>      	<!-- the canvas plugin -->
+	<script type="text/javascript" src="src/jquery.bart.js"></script>              <!-- the main BART plugin -->
+	<link rel="stylesheet" type="text/css" href="src/jquery.bart.css" />        <!-- additional styles for to make the BART look fancy -->  
+	<!-- additional scripts to run the demo on this page -->
+	<script type="text/javascript">
+	//<![CDATA[
+		// initialize the BART after the page has loaded
+		$(document).ready(function() {
+		
+			// create a BART with default values using 10 balloons
+			$("#bart").bart( 10 );
+		});
+	
+	//]]>
+	</script>
+
+<script>
+  var left = 0;
+
+  function frame() {
+    var element = document.querySelector('.logo');
+    left += .3;
+    element.style.left = left + 'px';
+    if (left >= 120) {
+      clearInterval(id)
+    }
+  }
+
+  var id = setInterval(frame, 10)
+
+  
+</script>
+
+</body>
+</html>

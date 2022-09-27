@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>elle!</title>
+    <link href='styles.css' rel='stylesheet'/>
+  </head>
+  <body>
+
+    <div class='header'>
+      <div class='logo'><img src='images/awesome-logo.svg'/></div>
+      <div class="menue">
+      <ul class='menu'>
+        <li class='dropdown'><span>projects &#9662;</span>
+          <ul class='features-menu'>           <!-- Start of submenu -->
+            <li><a href='creepy.html'>creepy</a></li>
+            <li><a href='BART/risk.html'>risk</a></li>
+            <li><a href='evil-women.html'>evil women</a></li>
+            <li><a href='forensic-psychology.html'>forensic psychology</a></li>
+          </ul>                                <!-- End of submenu -->
+        </li>
+        <li><a href='about-me.html'>about me</a></li>   
+        <li><a href='contact-me.html'>contact me</a></li>
+        <li><a href='index.html'>home</a></li>
+      </ul>
+    </div>
+    </div>  
+
+    <div class="welcome">
+      <h1>oh hi!</h1>
+      <p>
+        In my endeavours to better understand HTML, CSS, and JavaScript, this is my website. Please explore the various pages via the menu bar up top. This website is by no means complete, and I'm still learning how to code. If you know how to code, don't look at the html files for this- you will cringe.
+      </br> I don't know what to put on this page, so for now, enjoy some photographs of me and my dog, Finnigan, conquering the universe together. You can learn more about him and me in the <em>about me</em> tab.
+      </p>
+    </div>
+
+      <div class="photo-grid-container">
+        <div class="photo-grid">
+            <div class="photo-grid-item first item">
+                <img src="images/one.svg"/>
+            </div>
+            <div class="photo-grid-item">
+                <img src="images/two.svg"/>
+            </div>
+            <div class="photo-grid-item">
+                <img src="images/three.svg">
+            </div>
+            <div class='photo-grid-item'>
+                <img src='images/four.svg'/>
+              </div>
+              <div class='photo-grid-item'>
+                <img src='images/five.svg'/>
+              </div>
+              <div class='photo-grid-item last-item'>
+                <img src='images/six.svg'/>
+              </div>
+        </div>
+    </div>
+
+    <div class='footer'>
+        <div class='footer-item footer-one'></div>
+        <div class='footer-item footer-two'></div>
+        <div class='footer-item footer-three'></div>
+      </div>
+
+<script>
+  var left = 0;
+
+  function frame() {
+    var element = document.querySelector('.logo');
+    left += .3;
+    element.style.left = left + 'px';
+    if (left >= 120) {
+      clearInterval(id)
+    }
+  }
+
+  var id = setInterval(frame, 10)
+
+  
+</script>
+
+  </body>
+</html>
